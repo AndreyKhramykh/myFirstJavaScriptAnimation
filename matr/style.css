@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+:root {
+    --width: 200px;
+    --animeTime: 10s;
+    --animeDelay: 4s;
+    --animeSteps: steps(24);
+}
+
+.dialog {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 40px;
+    font-size: 24px;
+    font-family: Consolas;
+    white-space: nowrap;
+    overflow: hidden;
+   
+}
+
+.text {
+    color: white;
+    text-shadow: 4px 4px 6px green;
+    border-right: 1px solid white;
+    width: var (--width);
+    overflow: hidden;
+    border-right: 4px solid white;
+    animation: typewriter1 var(--animeTime) var(--animeSteps) var(--animeDelay) 3 both,
+    blinkTextCursor1 1000ms steps(440) infinite normal;
+
+    
+}
+
+@keyframes typewriter1{
+    0% {width: 0;}
+    20% {width: var(--width);}
+  }
+@keyframes blinkTextCursor1{
+    from{border-right-color: rgb(255, 255, 255,);}
+    to{border-right-color: transparent;}
+  }
+
+
